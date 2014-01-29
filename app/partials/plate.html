@@ -1,0 +1,13 @@
+<a href="#/menu">
+	<h4> Back to Menu </h4>
+</a>
+
+<table class="table table-striped">
+		<tr ng-repeat="item in orderList track by $index">
+		    <td>{{item.quanitity}}</td>
+		    <td>{{item.size}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.price}}</td>
+			<td><a href="#/editOrder"><i class="glyphicon glyphicon-edit"></i></a></td>
+		</tr>
+</table>	

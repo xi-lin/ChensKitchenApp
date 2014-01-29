@@ -1,0 +1,13 @@
+<a href="#/plate"> 
+	<h4>Plate</h4>
+</a>
+<form>
+<table class="table table-striped">
+	<tr ng-repeat="item in menuItem">
+		<td>{{item.name}}</td>
+		<td>{{item.price[0].small}} / {{item.price[0].large}}</td>
+		<td><a href="#/order/{{item.name}}"> <i class="glyphicon glyphicon-plus-sign"></i></a></td>
+	</tr>
+</table>
+</form>
+

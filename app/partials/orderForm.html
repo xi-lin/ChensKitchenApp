@@ -1,0 +1,14 @@
+<form action="">
+<div class="text-center">
+	<h3 >{{item}}</h3><br>
+	<input class="form-control" ng-init="item_quantity=1" type="number" min ="1" name="item_quantity" ng-model="item_quantity"><br>
+	<select class="form-control" ng-init="item_size = sizes[0]"ng-model="item_size" ng-options="size as size.size for size in sizes"></select><br>
+	<button type="button" class="btn btn-default">
+		Add Item
+	</button>
+	<button type="button" class="btn btn-default pull-right" href="#/menu">
+		Cancel
+	</button>
+</div>	
+</form>
+
