@@ -1,13 +1,36 @@
 <a href="#/plate"> 
 	<h4>Plate</h4>
 </a>
-<form>
 <table class="table table-striped">
 	<tr ng-repeat="item in menuItem">
 		<td>{{item.name}}</td>
 		<td>{{item.price[0].small}} / {{item.price[0].large}}</td>
-		<td><a href="#/order/{{item.name}}"> <i class="glyphicon glyphicon-plus-sign"></i></a></td>
+		<td>
+			<span ng-click="menuFunctions.pMenuItem(item)" data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-plus-sign"></span>
+		</td>
 	</tr>
 </table>
-</form>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">{{$index}}</h4>
+      </div>
+      <div class="modal-body">
+		<form action="">
+			<div class="text-center">
+				<input class="form-control" ng-init="item_quantity=1" type="number" min ="1" name="item_quantity" ng-model="item_quantity"><br>
+				<select class="form-control" ng-init="item_size = sizes[0]"ng-model="item_size" ng-options="size as size.size for size in sizes"></select><br>
+			</div>	
+		</form>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add item</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

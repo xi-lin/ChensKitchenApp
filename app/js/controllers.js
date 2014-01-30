@@ -5,6 +5,8 @@
 angular.module('chensKitchen.controllers', [])
 
   .controller('MenuCtrl', function($scope) {
+
+   
   
    $scope.menuItem = [ 
          {  
@@ -24,10 +26,19 @@ angular.module('chensKitchen.controllers', [])
 		 	price: [{small: 8.95, large: 9.55}],
 		 	description: 'Fried rice with scallions and savory pork'}
 			         ];
-	$scope.orderList = [];	
 
-	$scope.sizes = [{size: 'small'},{size: 'large'}];	         
-    
+	$scope.menuSize = ['small','large'];	
+
+	$scope.menuFunctions = {
+		pendCustItems: [],
+		pMenuItem: function(p){
+	     function(){
+	    	//pendCustItems.push(p);	     	
+	     }
+	     	return console.log(p);
+		}
+	};
+
   })
 
   .controller('PlateCtrl', function($scope) {
@@ -35,12 +46,5 @@ angular.module('chensKitchen.controllers', [])
   }) 
 
   .controller('HomeCtrl', function($scope) {
-
-  })
-
-  .controller('OrderCtrl', function($scope, $routeParams) {
-     
-         // $scope.item = "stuff";
-         $scope.item = $routeParams.id;
 
   }); 

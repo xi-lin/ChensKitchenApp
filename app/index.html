@@ -7,11 +7,28 @@
   <link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/home">Home</a></li>
-    <li><a href="#/menu">Menu</a></li>
-    <li><a href="#/plate">Plate</a></li>
-  </ul>
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#/home">Chen's Kitchen</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="top-navigation">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#/home">Home</a></li>
+      <li><a href="#/menu">Menu</a></li>
+      <li><a href="#/plate">Plate</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
 
   <div ng-view></div>
 
